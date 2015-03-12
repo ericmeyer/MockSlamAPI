@@ -10,7 +10,7 @@ More specifically, it is useful for:
 
  * Mocking out an endpoint before it exists.
  * Quickly changing an endpoint's response while your are actively developing a new feature against the endpoint.
- * Eventually, high level testing that hits a real, albeit a mock one.
+ * Eventually, high level testing that hits a real server, albeit a mock one.
 
 ## Setup/Use
 
