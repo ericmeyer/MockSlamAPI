@@ -21,5 +21,5 @@ More specifically, it is useful for:
 ## Endpoints
 
 | HTTP Method | Endpoint | Description |
-| - | - | - |
+| ----------- | -------- | ----------- |
 | GET | /current_queue | Fetch the list of matches in the queue |
