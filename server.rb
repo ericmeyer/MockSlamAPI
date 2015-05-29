@@ -9,12 +9,19 @@ class Queue
     @matches
   end
 
+  def self.delete(id)
+    @matches.each do |match|
+      if match[:id] == id
+        @matches.delete(match)
+      end
+    end
+  end
+
   def self.add_match(options)
     @matches << options.merge({
       id: rand(100000).to_s
     })
   end
-
 end
 
 post '/add_match' do
@@ -30,4 +37,8 @@ end
 get '/current_queue' do
   content_type "application/json"
   Queue.all.to_json
+end
+
+delete "/delete_match" do
+  Queue.delete(params[:id])
 end
