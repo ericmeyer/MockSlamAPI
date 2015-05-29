@@ -41,4 +41,7 @@ end
 
 delete "/delete_match" do
   Queue.delete(params[:id])
+  {
+    success: true
+  }.to_json
 end
