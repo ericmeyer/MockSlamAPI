@@ -45,3 +45,18 @@ delete "/delete_match" do
     success: true
   }.to_json
 end
+
+post "/login" do
+  content_type "application/json"
+  if params[:email] == "good"
+    {
+      success: true,
+      token: "123ABC"
+    }.to_json
+  else
+    status 401
+    {
+      success: false
+    }.to_json
+  end
+end
